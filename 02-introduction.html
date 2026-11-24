@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f4a3b">
+<title>Introduction du compilateur — Les chemins de la paix</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{if(localStorage.getItem('sobul-dark')==='1')document.documentElement.classList.add('dark');var f=localStorage.getItem('sobul-fs');if(f)document.documentElement.style.setProperty('--fs',f+'px')}catch(e){}</script>
+</head>
+<body class="is-chap" data-file="02-introduction.html">
+<div id="rbar" aria-hidden="true"><i></i></div>
+<header class="bar">
+  <button class="ib" id="bt" aria-label="Sommaire" title="Sommaire">☰</button>
+  <a class="brand" href="index.html" title="Couverture"><span class="b1">Subul as-Salâm</span><span class="b2">Introduction du compilateur</span></a>
+  <span class="pct" id="pct" title="Progression dans le chapitre"></span>
+  <button class="ib mk" id="mk" title="Ajouter un marque-page ici" aria-label="Ajouter un marque-page">🔖<span>Marquer</span></button>
+  <button class="ib" id="fm" aria-label="Réduire le texte" title="Réduire le texte">A−</button>
+  <button class="ib" id="fp" aria-label="Agrandir le texte" title="Agrandir le texte">A+</button>
+  <button class="ib" id="dk" aria-label="Mode nuit" title="Mode nuit">☾</button>
+  <a class="ib" id="prevb" href="01-presentation.html" title="Chapitre précédent" aria-label="Chapitre précédent">‹</a><a class="ib" id="nextb" href="03-biographie.html" title="Chapitre suivant" aria-label="Chapitre suivant">›</a>
+</header>
+<div id="veil"></div>
+<aside id="side" aria-label="Navigation">
+  <div class="tabs" role="tablist">
+    <button class="tab on" data-tab="toc" role="tab">Sommaire</button>
+    <button class="tab" data-tab="bm" role="tab">Marque-pages <span id="bmn"></span></button>
+  </div>
+  <div class="gprog"><div class="gl"><span>Progression du livre</span><b id="gpct">0 %</b></div><div class="gbar"><i id="gbar"></i></div></div>
+  <nav class="pane on" id="pane-toc">
+    <a class="cov-link" href="index.html">❦ Couverture</a>
+    <details class="part" open><summary><span class="pfr">Préliminaires</span><span class="par" lang="ar" dir="rtl">المقدمات</span></summary><ol>
+<li class="ch" data-f="01-presentation.html"><a href="01-presentation.html"><span class="chk" aria-hidden="true"></span><span class="tt">Présentation du Dr ʿAbd al-ʿAzîz ibn Muhammad Âl ʿAbd al-Latîf</span></a></li>
+<li class="ch cur" data-f="02-introduction.html"><a href="02-introduction.html"><span class="chk" aria-hidden="true"></span><span class="tt">Introduction du compilateur</span></a><ul class="subs"><li><a href="#introduction-s1">Mon travail dans ce livre</a></li></ul></li>
+<li class="ch" data-f="03-biographie.html"><a href="03-biographie.html"><span class="chk" aria-hidden="true"></span><span class="tt">Biographie du commentateur</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Ouverture de l&#x27;explication</span><span class="par" lang="ar" dir="rtl">مقدمة الشرح</span></summary><ol>
+<li class="ch" data-f="04-ouverture.html"><a href="04-ouverture.html"><span class="chk" aria-hidden="true"></span><span class="tt">Explication des annulatifs de l'islam : ouverture</span></a></li>
+<li class="ch" data-f="05-nombre.html"><a href="05-nombre.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le nombre des annulatifs de l'islam et le statut de leur apprentissage</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le premier annulatif — l&#x27;association</span><span class="par" lang="ar" dir="rtl">الناقض الأول</span></summary><ol>
+<li class="ch" data-f="06-naqid1.html"><a href="06-naqid1.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le premier annulatif</span></a></li>
+<li class="ch" data-f="07-ibada.html"><a href="07-ibada.html"><span class="chk" aria-hidden="true"></span><span class="tt">Définition de l'adoration</span></a></li>
+<li class="ch" data-f="08-chirk.html"><a href="08-chirk.html"><span class="chk" aria-hidden="true"></span><span class="tt">Définition de l'association (chirk)</span></a></li>
+<li class="ch" data-f="09-farq.html"><a href="09-farq.html"><span class="chk" aria-hidden="true"></span><span class="tt">La différence entre l'associateur et le mécréant</span></a></li>
+<li class="ch" data-f="10-tawhid.html"><a href="10-tawhid.html"><span class="chk" aria-hidden="true"></span><span class="tt">Les sortes du monothéisme (tawhîd)</span></a></li>
+<li class="ch" data-f="11-dhabh.html"><a href="11-dhabh.html"><span class="chk" aria-hidden="true"></span><span class="tt">« En fait partie le fait d'égorger pour un autre qu'Allah »</span></a></li>
+<li class="ch" data-f="12-sultan.html"><a href="12-sultan.html"><span class="chk" aria-hidden="true"></span><span class="tt">Égorger à l'arrivée du souverain</span></a></li>
+<li class="ch" data-f="13-invite.html"><a href="13-invite.html"><span class="chk" aria-hidden="true"></span><span class="tt">Égorger pour l'invité ou pour la famille</span></a></li>
+<li class="ch" data-f="14-ayant-droit.html"><a href="14-ayant-droit.html"><span class="chk" aria-hidden="true"></span><span class="tt">Égorger pour honorer celui qui a un droit</span></a></li>
+<li class="ch" data-f="15-tombe.html"><a href="15-tombe.html"><span class="chk" aria-hidden="true"></span><span class="tt">Égorger pour Allah le Très-Haut auprès de la tombe</span></a></li>
+<li class="ch" data-f="16-nadhr.html"><a href="16-nadhr.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le vœu fait aux tombes</span></a></li>
+<li class="ch" data-f="17-maasi.html"><a href="17-maasi.html"><span class="chk" aria-hidden="true"></span><span class="tt">Les désobéissances sont le messager de la mécréance, sans être une mécréance</span></a></li>
+<li class="ch" data-f="18-khulud.html"><a href="18-khulud.html"><span class="chk" aria-hidden="true"></span><span class="tt">La différence entre l'éternité du mécréant et celle du désobéissant dans le Feu</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le deuxième annulatif — les intermédiaires</span><span class="par" lang="ar" dir="rtl">الناقض الثاني</span></summary><ol>
+<li class="ch" data-f="19-naqid2.html"><a href="19-naqid2.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le deuxième annulatif</span></a></li>
+<li class="ch" data-f="20-hadith-salat.html"><a href="20-hadith-salat.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le hadith « Votre prière m'est présentée »</span></a></li>
+<li class="ch" data-f="21-aveugle.html"><a href="21-aveugle.html"><span class="chk" aria-hidden="true"></span><span class="tt">La réponse au sujet du hadith de l'aveugle</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le troisième annulatif</span><span class="par" lang="ar" dir="rtl">الناقض الثالث</span></summary><ol>
+<li class="ch" data-f="22-naqid3.html"><a href="22-naqid3.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le troisième annulatif</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le quatrième annulatif</span><span class="par" lang="ar" dir="rtl">الناقض الرابع</span></summary><ol>
+<li class="ch" data-f="23-naqid4.html"><a href="23-naqid4.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le quatrième annulatif</span></a></li>
+<li class="ch" data-f="24-tahkim.html"><a href="24-tahkim.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le statut de celui qui n'agrée pas le recours au jugement de la Loi d'Allah</span></a></li>
+<li class="ch" data-f="25-mudtarr.html"><a href="25-mudtarr.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le statut de celui qui est contraint de recourir au jugement de la loi conventionnelle</span></a></li>
+<li class="ch" data-f="26-rasul.html"><a href="26-rasul.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le statut de celui qui n'agrée pas le jugement du Messager ﷺ</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le cinquième annulatif</span><span class="par" lang="ar" dir="rtl">الناقض الخامس</span></summary><ol>
+<li class="ch" data-f="27-naqid5.html"><a href="27-naqid5.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le cinquième annulatif</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le sixième annulatif</span><span class="par" lang="ar" dir="rtl">الناقض السادس</span></summary><ol>
+<li class="ch" data-f="28-naqid6.html"><a href="28-naqid6.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le sixième annulatif</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le septième annulatif — la sorcellerie</span><span class="par" lang="ar" dir="rtl">الناقض السابع</span></summary><ol>
+<li class="ch" data-f="29-naqid7.html"><a href="29-naqid7.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le septième annulatif</span></a></li>
+<li class="ch" data-f="30-nushra.html"><a href="30-nushra.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le statut de la <em>nushra</em> (le désenvoûtement)</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le huitième annulatif — l&#x27;alliance avec les mécréants</span><span class="par" lang="ar" dir="rtl">الناقض الثامن</span></summary><ol>
+<li class="ch" data-f="31-naqid8.html"><a href="31-naqid8.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le huitième annulatif</span></a></li>
+<li class="ch" data-f="32-istiana.html"><a href="32-istiana.html"><span class="chk" aria-hidden="true"></span><span class="tt">Demander l'aide des mécréants contre des mécréants</span></a></li>
+<li class="ch" data-f="33-kafir-muhibb.html"><a href="33-kafir-muhibb.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le mécréant est-il aimé s'il aime les musulmans ?</span></a></li>
+<li class="ch" data-f="34-tanasur.html"><a href="34-tanasur.html"><span class="chk" aria-hidden="true"></span><span class="tt">L'obligation de l'entraide et du soutien mutuel entre les croyants</span></a></li>
+<li class="ch" data-f="35-hatib.html"><a href="35-hatib.html"><span class="chk" aria-hidden="true"></span><span class="tt">Propos sur le hadith de Hâtib</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le neuvième annulatif</span><span class="par" lang="ar" dir="rtl">الناقض التاسع</span></summary><ol>
+<li class="ch" data-f="36-naqid9.html"><a href="36-naqid9.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le neuvième annulatif</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Le dixième annulatif</span><span class="par" lang="ar" dir="rtl">الناقض العاشر</span></summary><ol>
+<li class="ch" data-f="37-naqid10.html"><a href="37-naqid10.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le dixième annulatif</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Les empêchements au takfîr</span><span class="par" lang="ar" dir="rtl">موانع التكفير</span></summary><ol>
+<li class="ch" data-f="38-mawani.html"><a href="38-mawani.html"><span class="chk" aria-hidden="true"></span><span class="tt">Les empêchements au takfîr de la personne désignée</span></a></li>
+<li class="ch" data-f="39-jahl.html"><a href="39-jahl.html"><span class="chk" aria-hidden="true"></span><span class="tt">L'empêchement de l'ignorance</span></a></li>
+<li class="ch" data-f="40-mithaq.html"><a href="40-mithaq.html"><span class="chk" aria-hidden="true"></span><span class="tt">Propos sur la valeur probante du pacte primordial</span></a></li>
+<li class="ch" data-f="41-khata.html"><a href="41-khata.html"><span class="chk" aria-hidden="true"></span><span class="tt">L'empêchement de l'erreur</span></a></li>
+<li class="ch" data-f="42-tawil.html"><a href="42-tawil.html"><span class="chk" aria-hidden="true"></span><span class="tt">L'empêchement de l'interprétation</span></a></li>
+<li class="ch" data-f="43-muayyan.html"><a href="43-muayyan.html"><span class="chk" aria-hidden="true"></span><span class="tt">Le takfîr de la personne désignée</span></a></li>
+</ol></details>
+<details class="part"><summary><span class="pfr">Fin du livre</span><span class="par" lang="ar" dir="rtl">الخاتمة</span></summary><ol>
+<li class="ch" data-f="44-khatar.html"><a href="44-khatar.html"><span class="chk" aria-hidden="true"></span><span class="tt">« Et tous sont parmi ce qu'il y a de plus grave »</span></a></li>
+<li class="ch" data-f="45-conclusion.html"><a href="45-conclusion.html"><span class="chk" aria-hidden="true"></span><span class="tt">Conclusion</span></a></li>
+</ol></details>
+  </nav>
+  <div class="pane" id="pane-bm"><div id="bmlist"></div></div>
+</aside>
+<aside id="onpage" aria-label="Dans ce chapitre"></aside>
+<main id="main">
+<article class="chap" id="chap"><header class="ch-h"><p class="kicker">Préliminaires · Chapitre 2 / 45</p><p class="ar-t" dir="rtl" lang="ar">مقدمة</p><h1>Introduction du compilateur</h1><p class="rt">≈ 5 min de lecture</p></header><p>Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux.</p>
+<p>Louange à Allah, Seigneur des mondes, et qu'Allah prie sur celui qui a été envoyé comme miséricorde pour les mondes, notre Prophète Muhammad, ainsi que sur sa famille et l'ensemble de ses compagnons, et qu'Il leur accorde la paix.</p>
+<p>Ensuite :</p>
+<p>Le Cheikh al-Islâm, l'imam rénovateur Muhammad ibn ʿAbd al-Wahhâb al-Wuhaybî at-Tamîmî, décédé en l'an 1206 H — qu'Allah le Très-Haut lui fasse miséricorde —, a rédigé une épître profitable et concise sur les annulatifs de l'islam, tenant en une seule feuille. Les explications de cette épître se sont multipliées et diversifiées, dépassant le nombre de vingt. L'explication que tu as entre les mains est une explication de longueur moyenne, chargée de bénéfices, remplie de choses précieuses et de perles rares. Je l'ai rassemblée à partir des propos de notre Cheikh, le grand savant, l'illustre, l'ascète, le traditionniste et juriste, phare de ceux qui interrogent et bienfaiteur des étudiants, celui qui a revivifié la Sunna resplendissante et réprimé les gens des innovations et des passions, Abû ʿAbd Allâh ʿAbd al-ʿAzîz ibn ʿAbd Allâh ibn Bâz — qu'Allah le Très-Haut lui fasse miséricorde, lui pardonne et le fasse habiter Ses vastes Jardins. Nous espérons que ce savant illustre fasse partie de ceux qu'englobe le hadith authentique sur les imams du renouveau, que nous a rapporté ʿAbd ar-Rahmân ibn ʿAbd al-Hayy al-Kattânî, par lecture devant lui, en disant : « Mon père m'a rapporté, par audition de sa part, d'après al-Khatîb ; al-Kuzbarî nous a informés ; az-Zabîdî nous a informés ; az-Zaʿbalî nous a informés ; al-Bâbilî nous a informés ; ach-Chams ar-Ramlî nous a informés, d'après al-Ansârî ; Muhammad ibn Muqbil nous a informés ; as-Salâh ibn Abî ʿUmar nous a informés ; al-Fakhr nous a informés ; Ibn Tabarzad nous a informés ; al-Karkhî nous a informés ; al-Khatîb nous a informés ; al-Hâchimî nous a informés ; al-Luʾluʾî nous a informés ; Abû Dâwûd nous a informés ; Sulaymân ibn Dâwûd al-Mahrî nous a rapporté ; Ibn Wahb nous a informés ; Saʿîd ibn Abî Ayyûb m'a informé, d'après Charâhîl ibn Yazîd al-Maʿâfirî, d'après Abû ʿAlqama, d'après Abû Hurayra — pour autant que je sache —, d'après le Messager d'Allah ﷺ, qui a dit :</p>
+<div class="citation"><div class="lab">Texte arabe :</div><p class="ar" dir="rtl" lang="ar">«إِنَّ اللَّهَ يَبْعَثُ لِهَذِهِ الْأُمَّةِ عَلَى رَأْسِ كُلِّ مِائَةِ سَنَةٍ مَنْ يُجَدِّدُ لَهَا دِينَهَا»</p><div class="lab">Traduction française :</div><p class="fr">« Certes, Allah suscite pour cette communauté, au début de chaque siècle, quelqu'un qui lui renouvelle sa religion. » <button class="fn" data-n="introduction-1" aria-label="Note 1">1</button></p></div>
+<p>Le renouveau consiste à faire revivre ce qui s'est effacé de la mise en pratique du Livre et de la Sunna, et à distinguer la Sunna de l'innovation.</p>
+<p>Le rénovateur est reconnu, avec une forte probabilité, par ceux qui ont été ses contemporains.</p>
+<p>Sache — qu'Allah te fasse miséricorde — que les annulatifs de l'islam sont d'un préjudice plus grave que les annulatifs des ablutions. En effet, lorsque les ablutions du musulman sont annulées, seule sa prière est invalidée : il lui incombe de la refaire, et il ne sort pas de l'islam pour autant. En revanche, s'il commet l'un des annulatifs de l'islam, il sort de la religion tout entière, et s'il meurt avant de s'être repenti, il meurt mécréant — qu'Allah nous en préserve.</p>
+<p>Notre Cheikh Ibn Bâz — qu'Allah lui fasse miséricorde — étant l'un des savants enracinés dans la science, cela m'a incité à rassembler une explication de sa part sur ces annulatifs, afin qu'elle soit un éclairage pour les débutants et un rappel pour les avancés. Je demande à Allah de faire en sorte que cette explication soit bien accueillie sur terre.</p>
+<h3 id="introduction-s1">Mon travail dans ce livre</h3>
+<p>1 - J'ai recherché les propos du Cheikh — qu'Allah lui fasse miséricorde — dans ses livres imprimés, parmi lesquels : <em>Majmûʿ Fatâwâ wa Maqâlât Mutanawwiʿa</em> (Recueil de fatwas et d'articles divers), compilé par le Cheikh ach-Chuwayʿir, dont les volumes ont atteint le nombre de trente — j'y renvoie dans les notes, par souci de concision, par l'expression « <em>Majmûʿ al-Fatâwâ</em> » ; le livre <em>Nûr ʿalâ ad-Darb</em> en quatre volumes, préparé par les deux Cheikhs at-Tayyâr et al-Mûsâ, édition Madâr al-Watan ; ainsi que <em>Fatâwâ Nûr ʿalâ ad-Darb</em> en seize volumes, sous la supervision d'ach-Chuwayʿir, et d'autres de ses livres imprimés.</p>
+<p>2 - J'ai beaucoup écouté les cours enregistrés du Cheikh et j'en ai transcrit ce qui concerne spécifiquement les annulatifs. Parmi ces cours : <em>Asʾilat al-Jâmiʿ al-Kabîr</em> (Questions de la Grande Mosquée), qui compte cent quatorze cassettes, que j'ai toutes écoutées — louange à Allah. Elles font partie des productions des enregistrements at-Taqwâ à Riyad, et j'y renvoie souvent dans les notes : si le passage cité de ses propos se trouve sur la première face, je l'indique par « a », et s'il se trouve sur la seconde, par « b ». Il en est ainsi pour tout ce à quoi je renvoie des propos du Cheikh dans ses cours conservés. Parmi ce que j'ai également écouté : l'explication de <em>at-Tahâwiyya</em>, qui compte trente-deux (32) cassettes, des productions des enregistrements Dâr Tayba ; de même l'explication du livre <em>al-Istiqâma</em> d'Ibn Taymiyya (18 cassettes), l'explication du <em>Kitâb at-Tawhîd</em> (10 cassettes), l'explication de <em>Riyâd as-Sâlihîn</em> (18 cassettes), des cours donnés après les prières du Maghrib et de l'ʿIchâʾ (95 cassettes), et d'autres explications nombreuses que tu verras dans les notes, si Allah le veut. Il arrive qu'un mot des propos du Cheikh — qu'Allah lui fasse miséricorde — ne soit pas clair dans ce qui a été enregistré de ses cours ; je le place alors entre crochets, ainsi : [ ], et il se peut que je le signale en note. Il se peut aussi que j'ajoute un mot qui complète le contexte ; je le place alors entre crochets en le signalant.</p>
+<p>3 - J'ai veillé à indiquer l'emplacement des versets.</p>
+<p>4 - J'ai fait la référence (takhrîj) des hadiths selon ce que le besoin exigeait, sans m'étendre, sauf en quelques rares endroits, comme le hadith de la prosternation de Muʿâdh devant le Prophète ﷺ.</p>
+<p>5 - J'ai commenté certains annulatifs dans les notes afin de compléter le bénéfice.</p>
+<p>6 - J'ai mentionné une biographie succincte du Cheikh, le grand savant ʿAbd al-ʿAzîz ibn Bâz — qu'Allah le Très-Haut lui fasse miséricorde.</p>
+<p>Je demande à Allah, par Ses plus beaux noms et Ses attributs les plus élevés, de rendre ce travail sincère pour Son noble Visage, de m'en faire profiter durant ma vie et après ma mort, le Jour où ni les biens ni les enfants ne seront d'aucune utilité, sauf pour celui qui viendra à Allah avec un cœur sain, et d'en faire profiter quiconque le lira, l'imprimera ou contribuera à sa diffusion. Il est, gloire à Lui, le Généreux, le Noble. Et qu'Allah prie sur notre Prophète Muhammad, sur sa famille, ses compagnons et ceux qui les suivent dans le bien jusqu'au Jour de la Rétribution.</p></article><nav class="pn"><a class="prev" href="01-presentation.html"><small>Précédent</small><span>Présentation du Dr ʿAbd al-ʿAzîz ibn Muhammad Âl ʿAbd al-Latîf</span></a><a class="next" href="03-biographie.html"><small>Suivant</small><span>Biographie du commentateur</span></a></nav>
+</main>
+<div id="pop" role="dialog" aria-live="polite"><div class="ph"><b id="popt"></b><button class="x" aria-label="Fermer">×</button></div><div id="popc"></div></div>
+<div id="toast"></div>
+<script>window.NOTES={"introduction-1": "Hadith authentique, rapporté par Abû Dâwûd dans ses <em>Sunan</em> (11/389/4270, avec <em>ʿAwn al-Maʿbûd</em>) et d'autres. Sa parole « au début (<em>raʾs</em>) de chaque siècle » signifie : à la fin des cent ans. Ce qui l'indique, c'est leur accord sur le fait que ʿUmar ibn ʿAbd al-ʿAzîz fait partie des rénovateurs, alors qu'il se situait à la fin du siècle, puisqu'il est mort en l'an cent un. Les savants ont dit : il se peut qu'il y ait, au cours du siècle, quelqu'un de meilleur que le rénovateur qui se trouve à son début ; mais si le rénovateur est placé au début du siècle, c'est parce que ce moment est généralement celui où disparaissent les savants et où apparaissent les innovations."};window.BOOK=[{"f": "01-presentation.html", "t": "Présentation du Dr ʿAbd al-ʿAzîz ibn Muhammad Âl ʿAbd al-Latîf", "w": 351}, {"f": "02-introduction.html", "t": "Introduction du compilateur", "w": 1150}, {"f": "03-biographie.html", "t": "Biographie du commentateur", "w": 1355}, {"f": "04-ouverture.html", "t": "Explication des annulatifs de l'islam : ouverture", "w": 414}, {"f": "05-nombre.html", "t": "Le nombre des annulatifs de l'islam et le statut de leur apprentissage", "w": 341}, {"f": "06-naqid1.html", "t": "Le premier annulatif", "w": 216}, {"f": "07-ibada.html", "t": "Définition de l'adoration", "w": 2730}, {"f": "08-chirk.html", "t": "Définition de l'association (chirk)", "w": 309}, {"f": "09-farq.html", "t": "La différence entre l'associateur et le mécréant", "w": 339}, {"f": "10-tawhid.html", "t": "Les sortes du monothéisme (tawhîd)", "w": 2447}, {"f": "11-dhabh.html", "t": "« En fait partie le fait d'égorger pour un autre qu'Allah »", "w": 1263}, {"f": "12-sultan.html", "t": "Égorger à l'arrivée du souverain", "w": 286}, {"f": "13-invite.html", "t": "Égorger pour l'invité ou pour la famille", "w": 161}, {"f": "14-ayant-droit.html", "t": "Égorger pour honorer celui qui a un droit", "w": 351}, {"f": "15-tombe.html", "t": "Égorger pour Allah le Très-Haut auprès de la tombe", "w": 61}, {"f": "16-nadhr.html", "t": "Le vœu fait aux tombes", "w": 5501}, {"f": "17-maasi.html", "t": "Les désobéissances sont le messager de la mécréance, sans être une mécréance", "w": 363}, {"f": "18-khulud.html", "t": "La différence entre l'éternité du mécréant et celle du désobéissant dans le Feu", "w": 816}, {"f": "19-naqid2.html", "t": "Le deuxième annulatif", "w": 6411}, {"f": "20-hadith-salat.html", "t": "Le hadith « Votre prière m'est présentée »", "w": 256}, {"f": "21-aveugle.html", "t": "La réponse au sujet du hadith de l'aveugle", "w": 890}, {"f": "22-naqid3.html", "t": "Le troisième annulatif", "w": 3930}, {"f": "23-naqid4.html", "t": "Le quatrième annulatif", "w": 590}, {"f": "24-tahkim.html", "t": "Le statut de celui qui n'agrée pas le recours au jugement de la Loi d'Allah", "w": 7096}, {"f": "25-mudtarr.html", "t": "Le statut de celui qui est contraint de recourir au jugement de la loi conventionnelle", "w": 127}, {"f": "26-rasul.html", "t": "Le statut de celui qui n'agrée pas le jugement du Messager ﷺ", "w": 1439}, {"f": "27-naqid5.html", "t": "Le cinquième annulatif", "w": 1546}, {"f": "28-naqid6.html", "t": "Le sixième annulatif", "w": 4660}, {"f": "29-naqid7.html", "t": "Le septième annulatif", "w": 7352}, {"f": "30-nushra.html", "t": "Le statut de la nushra (le désenvoûtement)", "w": 1523}, {"f": "31-naqid8.html", "t": "Le huitième annulatif", "w": 3930}, {"f": "32-istiana.html", "t": "Demander l'aide des mécréants contre des mécréants", "w": 1905}, {"f": "33-kafir-muhibb.html", "t": "Le mécréant est-il aimé s'il aime les musulmans ?", "w": 2372}, {"f": "34-tanasur.html", "t": "L'obligation de l'entraide et du soutien mutuel entre les croyants", "w": 482}, {"f": "35-hatib.html", "t": "Propos sur le hadith de Hâtib", "w": 1161}, {"f": "36-naqid9.html", "t": "Le neuvième annulatif", "w": 1589}, {"f": "37-naqid10.html", "t": "Le dixième annulatif", "w": 3050}, {"f": "38-mawani.html", "t": "Les empêchements au takfîr de la personne désignée", "w": 2451}, {"f": "39-jahl.html", "t": "L'empêchement de l'ignorance", "w": 6355}, {"f": "40-mithaq.html", "t": "Propos sur la valeur probante du pacte primordial", "w": 618}, {"f": "41-khata.html", "t": "L'empêchement de l'erreur", "w": 85}, {"f": "42-tawil.html", "t": "L'empêchement de l'interprétation", "w": 846}, {"f": "43-muayyan.html", "t": "Le takfîr de la personne désignée", "w": 972}, {"f": "44-khatar.html", "t": "« Et tous sont parmi ce qu'il y a de plus grave »", "w": 507}, {"f": "45-conclusion.html", "t": "Conclusion", "w": 170}];</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
